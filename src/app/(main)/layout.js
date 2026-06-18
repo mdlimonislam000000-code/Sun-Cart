@@ -5,6 +5,7 @@ import Footer from '@/components/shared/Footer';
 const MainLayout = ({children}) => {
     return (
         <div>
+            
             {children}
             {/* <ProductPage></ProductPage> */}
             <Footer></Footer>
