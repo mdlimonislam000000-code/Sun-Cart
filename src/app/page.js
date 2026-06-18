@@ -60,22 +60,39 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="container mx-auto px-4 bg-amber-50/40 py-12 rounded-3xl border border-amber-100/50">
-            <div className="text-center max-w-xl mx-auto mb-10">
-              <h2 className="text-3xl font-black text-gray-800">Our Top Brands 🔥</h2>
-              <p className="text-sm text-gray-500 mt-2">The summer collections of all the world's best and premium brands are now available on our SunCart.</p>
-            </div>
+          <div className="container mx-auto mt-5 overflow-hidden px-4 md:px-6 my-8">
+            <div className="bg-amber-50/40 py-8 md:py-12 rounded-3xl border border-amber-100/50 w-full px-4 text-center">
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {topBrands.map(brand => (
-                <div key={brand.id} className="card bg-white p-6 rounded-2xl border border-gray-100 shadow-xs  flex flex-col items-center justify-center relative overflow-hidden group">
-                  <div className="absolute top-3 right-3 text-emerald-500 opacity-0 ">
-                    <FaCheckCircle />
+              <div className=" container  max-w-xl mx-auto mb-8 md:mb-10">
+                <h2 className="text-2xl md:text-3xl font-black text-gray-800 flex items-center justify-center gap-2">
+                  Our Top Brands 🔥
+                </h2>
+                <p className="text-xs md:text-sm text-gray-500 mt-2 max-w-md mx-auto">
+                  The summer collections of all the world's best and premium brands are now available on our SunCart.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-full">
+                {topBrands.map(brand => (
+                  <div
+                    key={brand.id}
+                    className="card bg-white p-4 md:p-6 rounded-2xl border border-gray-100 shadow-xs flex flex-col items-center justify-center relative overflow-hidden group min-h-[110px] md:min-h-[140px] w-full"
+                  >
+                    <div className="absolute top-2 right-2 text-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity z-10">
+                      <FaCheckCircle className="text-sm md:text-base" />
+                    </div>
+
+                    <h3 className="text-base sm:text-lg md:text-2xl font-black tracking-wider text-gray-700 font-serif text-center w-full break-words px-1">
+                      {brand.name}
+                    </h3>
+
+                    <p className="text-[10px] md:text-xs text-gray-400 mt-1 font-medium text-center">
+                      {brand.products}
+                    </p>
                   </div>
-                  <h3 className="text-2xl font-black tracking-wider text-gray-700 font-serif ">{brand.name}</h3>
-                  <p className="text-xs text-gray-400 mt-1 font-medium">{brand.products}</p>
-                </div>
-              ))}
+                ))}
+              </div>
+
             </div>
           </div>
 
