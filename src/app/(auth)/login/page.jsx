@@ -17,7 +17,7 @@ const LoginPage = () => {
     const [isShowPassword, setIsShowPassword] = useState(true)
     const { register, handleSubmit, formState: { errors } } = useForm();
     const handelLoginFunc = async (data) => {
-        console.log(data)
+        // console.log(data)
 
         const { data: res, error } = await authClient.signIn.email({
             email: data.email, // required
@@ -37,7 +37,7 @@ const LoginPage = () => {
         }
 
     }
-    console.log(errors)
+    // console.log(errors)
 
 
 

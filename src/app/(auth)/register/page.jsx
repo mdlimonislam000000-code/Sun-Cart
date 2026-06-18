@@ -17,7 +17,7 @@ const RegisterPage = () => {
     const handelRegisterFunc = async (data) => {
         console.log(data)
         const { name, photo, email, password } = data;
-        console.log(email, name)
+        // console.log(email, name)
 
         const { data: res, error } = await authClient.signUp.email({
             name: name, // required
@@ -26,8 +26,8 @@ const RegisterPage = () => {
             image: photo,
             callbackURL: "/",
         })
-        console.log(res, error)
-        console.log(res, error)
+        // console.log(res, error)
+        // console.log(res, error)
         if (error) {
             toast(error.message);
         }
