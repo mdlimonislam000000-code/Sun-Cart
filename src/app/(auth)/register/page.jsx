@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 
 
 const RegisterPage = () => {
@@ -27,10 +28,11 @@ const RegisterPage = () => {
         console.log(res, error)
         console.log(res, error)
         if (error) {
-            alert(error.message)
+            toast(error.message);
         }
         if (res) {
-            alert("Registration Successful! Please login.");
+            toast("Registration Successful! Please login.");
+
             return('/login');
         }
     }

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FaEye, FaEyeSlash, FaGoogle } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 
 const LoginPage = () => {
     const handleGoogleSingIn = async () => {
@@ -26,11 +27,11 @@ const LoginPage = () => {
         });
 
         if (error) {
-            alert(error.message || "Login failed! Please check your credentials.");
+            toast("Login failed! Please check your credentials");
         }
 
         if (res) {
-            alert("Login Successful! Welcome back.");
+            toast("Login Successful! Welcome back.");
             return ('/');
 
         }

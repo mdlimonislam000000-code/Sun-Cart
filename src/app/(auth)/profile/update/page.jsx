@@ -2,12 +2,14 @@
 import React, { useState } from 'react';
 import { authClient } from "@/lib/auth-client";
 import { useRouter } from 'next/navigation';
+import { toast } from 'react-toastify';
 
 
 const UpdatePage = () => {
     const router = useRouter();
     const [name, setName] = useState('');
     const [image, setImage] = useState('');
+ 
 
     const handleFormSubmit = async (e) => {
         e.preventDefault();
@@ -15,15 +17,16 @@ const UpdatePage = () => {
         const { data, error } = await authClient.updateUser({
             name: name,
             image: image,
+           
         });
         if (error) {
-            alert(error.message || " Error ");
+            toast(error.message || " Error ");
         } else {
-            alert("Your Profile Is updated");
+            toast("Your Profile Is updated");
             router.push('/profile');
             router.refresh();
         }
-        
+
         console.log(data , error)
     };
     return (
@@ -37,6 +40,7 @@ const UpdatePage = () => {
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                     />
+                  
                     <input
                         type="url"
                         placeholder="Write Your New Url"
