@@ -10,7 +10,7 @@ import { LuSunMedium } from 'react-icons/lu';
 const Footer = () => {
     return (
         <div>
-            <footer className=" bg-amber-100 from-transparent to-orange-50/60 border-t border-orange-100/40 pt-16 pb-8 mt-24">
+            <footer className=" bg-amber-100 from-transparent to-orange-50/60 border-t border-orange-100/40 pt-16 pb-8 md:mt-24 mt-15">
                 <div className="container mx-auto px-6 md:px-12">
 
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
