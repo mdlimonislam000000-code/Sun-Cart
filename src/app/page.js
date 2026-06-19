@@ -42,7 +42,7 @@ export default function Home() {
 
           <div className="container mx-auto px-4">
             <div className="text-center max-w-xl mx-auto mb-10">
-              <h2 className="text-3xl font-black text-gray-800">Summer Care Tips ☀️</h2>
+              <h2 className="text-3xl flex gap-2 items-center justify-center font-black text-gray-800"><span>Summer Care Tips </span> <FaSun /></h2>
               <p className="text-sm text-gray-500 mt-2">
                 Follow our special tips to keep yourself healthy and refreshed in this intense heat.</p>
             </div>
