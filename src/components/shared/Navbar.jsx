@@ -33,7 +33,7 @@ const Navbar = () => {
                 </Link>
             </li>
             <li>
-                <Link href="/profile" className={pathname.startsWith('/my-profile') ? 'text-orange-500 font-bold md:text-[18px] border-b-2 border-orange-500 rounded-none bg-transparent' : 'text-gray-700'}>
+                <Link href="/profile" className={pathname.startsWith('/profile') ? 'text-orange-500 font-bold md:text-[18px] border-b-2 border-orange-500 rounded-none bg-transparent' : 'text-gray-700'}>
                     My Profile
                 </Link>
             </li>
